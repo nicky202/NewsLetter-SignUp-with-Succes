@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('assets/fonts/Roboto-Regular.ttf');
+}
+:root{
+    --primary-color:hsl(4, 100%, 67%);
+    --dark-slate-grey:hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'RobotoRegular';
+}
+body{
+    background-color: var(--charcoal-grey);
+}
+.card{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 72%;
+    height: auto;
+    border-radius: 2rem;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    color: var(--dark-slate-grey);
+}
+.cardImageMobile{
+    display: none;
+}
+.cardContent{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    padding: 3rem;
+}
+.cardContent h1{
+    font-size: 3.5rem;
+}
+.list{
+    list-style: none;
+}
+.list li{
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.formInput .label{
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: small;
+    font-weight: 700;
+}
+.formInput .label p{
+    color: var(--primary-color);
+}
+.formInput input{
+    width: 100%;
+    padding:  1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--grey);
+}
+.formInput input:focus{
+    outline: none;
+}
+.btnSubscribe{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0;
+    color: var(--white);
+    background-color: var(--dark-slate-grey);
+    cursor: pointer;
+    font-weight: 700;
+
+}
+.btnSubscribe:hover{
+    background: linear-gradient(90deg,#FF3E83, var(--primary-color));
+    box-shadow: 0px 5px 20px var(--primary-color);
+}
+
+.cardSuccess{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 330px;
+    width: 30%;
+    border-radius: 2rem;
+    background-color: var(--white);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardSuccessContent{
+    display: flex;
+    row-gap: 1rem;
+    flex-direction: column;
+
+}
+.cardSuccess h1{
+    font-size: 3rem;
+    color: var(--dark-slate-grey);
+    font-weight: 700;
+}
+.cardSuccess p{
+    font-size: small;
+    color: var(--charcoal-grey);
+}
+.cardSuccess span{
+    color: var(--dark-slate-grey) ;
+    font-weight: 700;
+}
+.btnSuccess{
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0;
+    color: var(--white);
+    background-color: var(--dark-slate-grey);
+    cursor: pointer;
+    font-weight: 700;
+}
+.btnSuccess:hover{
+    background: linear-gradient(90deg,#FF3E83, var(--primary-color));
+    box-shadow: 0px 5px 20px var(--primary-color);
+}
+@media screen and (max-width:1250px){
+    .card{
+        width: 100%;
+        padding: 1rem;
+    }
+}
+@media screen and (max-width:400px) {
+    .card{
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .cardImageMobile{
+        display: block;
+        width: 100%;
+    }
+    .cardImageMobile img{
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+    }
+    .cardImageDesktop{
+        display: none;
+    }
+    .cardContent{
+        width: 100%;
+        padding: 2rem;
+    }
+    .cardContent h1{
+        font-size: 2rem;
+    }
+
+    .cardSuccess{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        padding: 5rem 1.5rem 1.5rem 1.5rem;
+    }
+}
